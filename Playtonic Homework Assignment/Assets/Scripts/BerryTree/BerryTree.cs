@@ -46,6 +46,10 @@ public class BerryTree : MonoBehaviour
                 //If the current berry is cannot currently be collected, it has been collected, and so it must be regrown
                 if ( !berryController.m_canBeCollected && !berryController.m_isGrowing )
                 {
+
+                    //Sets the isGrowing in the Berry to true to prevent further calls of this method
+                    berryController.m_isGrowing = true;
+
                     //Starts a coroutine to regrow the berry with a short time delay
                     StartCoroutine( WaitToRegrowBerry( berry ) );
 

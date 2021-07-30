@@ -48,7 +48,7 @@ GameObject:
   - component: {fileID: 8265856335363892308}
   - component: {fileID: 8559601166102170689}
   - component: {fileID: 1264343912632208785}
-  m_Layer: 0
+  m_Layer: 9
   m_Name: BerryTree
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -135,6 +135,8 @@ MonoBehaviour:
   - {fileID: 1652841857263769530}
   - {fileID: 4173924831054999565}
   - {fileID: 6762766534222287949}
+  m_berryRegrowDelay: 0
+  m_treeID: 0
 --- !u!64 &1264343912632208785
 MeshCollider:
   m_ObjectHideFlags: 0

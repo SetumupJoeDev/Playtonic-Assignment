@@ -98,6 +98,7 @@ MonoBehaviour:
   m_berryCollected: {fileID: 8300000, guid: 9c63e046ef9244449aef58a48532f853, type: 3}
   m_berryAnimator: {fileID: 1974759982787883}
   m_isGrowing: 0
+  m_parentTreeID: 0
 --- !u!135 &4538956351795718277
 SphereCollider:
   m_ObjectHideFlags: 0
@@ -109,8 +110,8 @@ SphereCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Radius: 0.75
-  m_Center: {x: 0, y: 0, z: -0.21824265}
+  m_Radius: 1
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!95 &1974759982787883
 Animator:
   serializedVersion: 3

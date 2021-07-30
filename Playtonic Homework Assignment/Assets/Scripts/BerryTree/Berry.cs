@@ -29,14 +29,13 @@ public class Berry : MonoBehaviour
 
     #endregion
 
-    public void ToggleCanBeCollected( )
+    public void FinishGrowing( )
     {
-        m_canBeCollected = !m_canBeCollected;
-    }
 
-    public void ToggleIsGrowing( )
-    {
-        m_isGrowing = !m_isGrowing;
+        m_canBeCollected = true;
+
+        m_isGrowing = false;
+
     }
 
     private void OnTriggerEnter( Collider other )
@@ -48,8 +47,9 @@ public class Berry : MonoBehaviour
             AudioSource.PlayClipAtPoint( m_berryCollected, transform.position );
 
             //Toggles the boolean to false so that this berry cannot be collected again until the boolean is toggled back to true
-            ToggleCanBeCollected( );
+            m_canBeCollected = false;
 
+            //Calls the BerryCollected event so that the tree this berry belongs to can regrow it
             EventManager.current.BerryCollected( m_parentTreeID );
 
             //Disables the Berry so it cannot be collected more than once before re-growing

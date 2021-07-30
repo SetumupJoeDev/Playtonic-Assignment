@@ -118,6 +118,12 @@ public class PlayerController : MonoBehaviour
 
         CameraControls( );
 
+        //If the player presses any button mapped to Cancel, the game closes
+        if( Input.GetButtonDown("Cancel") )
+        {
+            Application.Quit( );
+        }
+
     }
 
     public virtual void MovementControls( )
